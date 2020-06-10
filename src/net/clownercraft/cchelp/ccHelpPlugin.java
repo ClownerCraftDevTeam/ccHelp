@@ -41,8 +41,15 @@ public class ccHelpPlugin extends Plugin {
 
     private void loadFiles() {
         //Load all files in the plugin data folder
-        File dataFolder = instance.getDataFolder();
+        File dataFolder = this.getDataFolder();
+        if (dataFolder.mkdir()) {
+            this.getLogger().info("Created Data Folder");
+        }
+
         File categoryFolder = new File(dataFolder,"categories");
+
+        File commandsFile = new File(dataFolder,"config.yml");
+
 
         //If the category folder doesn't exist, create it and save the default files
         if (categoryFolder.mkdir()){
@@ -54,20 +61,22 @@ public class ccHelpPlugin extends Plugin {
             try {
                 Files.copy(mainIn,mainFile.toPath());
                 Files.copy(rulesIn,rulesFile.toPath());
+                this.getLogger().info("Saved Default Category Files");
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
         }
 
-        //load config.yml
-        File commandsFile = new File(dataFolder,"config.yml");
 
         //Save default if it doesn't exist
         if (!commandsFile.exists()) {
             InputStream commandsIn = this.getResourceAsStream("config.yml");
             try {
                 Files.copy(commandsIn,commandsFile.toPath());
+                this.getLogger().info("Saved Default Config");
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
