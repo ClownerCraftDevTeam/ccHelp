@@ -33,6 +33,7 @@ public class ccHelpCommand extends Command implements TabExecutor {
     @Override
     public void execute(CommandSender commandSender, String[] args) {
         String page = "main";
+        String cat;
 
         /*
         Find the category and page
@@ -40,9 +41,9 @@ public class ccHelpCommand extends Command implements TabExecutor {
         //Main Command
         if (category.equals("")) {
             if (args.length<1) {
-                category = "main";
+                cat = "main";
             } else {
-                category = args[0];
+                cat = args[0];
                 if (args.length>1) {
                     page = args[1];
                 } else {
@@ -51,8 +52,10 @@ public class ccHelpCommand extends Command implements TabExecutor {
             }
         } else {
             if (args.length<1) {
+                cat = category;
                 page = "main";
             } else {
+                cat = category;
                 page = args[0];
             }
         }
@@ -62,8 +65,7 @@ public class ccHelpCommand extends Command implements TabExecutor {
         Get and send the text to player
          */
         try {
-
-            String[] text = ccHelpPlugin.getInstance().categories.get(category).get(page);
+            String[] text = ccHelpPlugin.getInstance().categories.get(cat).get(page);
             for (String s : text) {
                 BaseComponent[] message = TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', s));
                 commandSender.sendMessage(message);
@@ -74,7 +76,7 @@ public class ccHelpCommand extends Command implements TabExecutor {
                             '&',ccHelpPlugin.getInstance().pageNotFound));
 
             commandSender.sendMessage(message);
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
