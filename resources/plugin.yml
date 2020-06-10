@@ -1,0 +1,4 @@
+name: ccHelp
+main: net.clownercraft.cchelp.ccHelpPlugin
+version: ${project.version}
+author: TheClowner
