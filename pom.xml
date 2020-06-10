@@ -19,7 +19,7 @@
         <finalName>${project.name}-${project.version}</finalName>
         <resources>
             <resource>
-                <directory>resources</directory>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
