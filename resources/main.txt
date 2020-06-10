@@ -1,0 +1,17 @@
+#main#
+This is the help main ccHelp page.
+Each file is a category with the file name giving it's name
+Each category can have multiple named pages, a page is created with \#page\#
+Every category needs a main page, and you must keep the main category
+
+/cchelp would direct to this page by default
+/cchelp main and /cchelp main main would also direct here
+
+&cColour Codes are supported using the & character
+escape a \# by adding a backslash \ first
+
+#2#
+This is page 2, accessible by /cchelp main 2
+
+#named#
+This is an example named page. /cchelp main named

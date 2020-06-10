@@ -1,0 +1,16 @@
+#main#
+&6⚔ &4&m–––––––––––––&6 &c&lNetwork Rules &4&m––––––––––––––&6 &6⚔&c
+
+  &6⚔ &cThis is the example rules category. Change to however you wish
+
+  &6⚔ &cLorem Ipsum Dolor Sit Amet
+
+  &6⚔ &cLorem Ipsum Dolor Sit Amet
+
+&6⚔ &4&m–––––&6 &cUse &7/rules PVP&c for PVP rules &4&m–––––&6 &6⚔
+#pvp#
+&6⚔ &4&m–––––––––––––&6 &c&lPVP Rules &4&m––––––––––––––&6 &6⚔&c
+
+  &6⚔ &cLorem Ipsum Dolor Sit Amet
+
+&6⚔ &4&m––––––&c  &cPlease ask our team if you're unsure!  &4&m––––––&6 &6⚔

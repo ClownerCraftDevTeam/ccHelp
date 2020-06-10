@@ -1,0 +1,19 @@
+#Defines what commands to register, and what categories to route the commands to
+
+#The Overall command used to view information
+#Syntax would be /cchelp [category] [page]
+GeneralCommand: cchelp
+ReloadCommand: cchelpreload
+
+CategoriesCommands:
+  #commandlabel: "category name"
+  #Eg this will map /rules to read from rules.txt
+  #You will have to create files for each category you wish to use
+  rules: rules
+
+
+#Customise the plugin messages. Use & for colour codes
+Messages:
+  pageNotFound: "&4ccHelp » &cPage not found."
+  reloaded:  "&4ccHelp » &cPlugin reloaded."
+  noPermission:  "&4ccHelp » &cYou do not have permission for that."
