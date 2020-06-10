@@ -111,7 +111,7 @@ public class ccHelpPlugin extends Plugin {
 
                 HashMap<String, String[]> pages = new HashMap<>();
                 String[] split = content.split("(?<!\\\\)#");
-                for (int j = 0; j < split.length - 1; j += 2) {
+                for (int j = 1; j < split.length - 1; j += 2) {
                     String name2 = split[j];
                     String pageC = split[j + 1];
                     String[] pageCs = pageC.split("\n");
